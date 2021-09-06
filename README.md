@@ -45,6 +45,21 @@ pipe
 TypeORM
 - 장점 : 서버별 테이블 상태가 동일하게 유지할 수 있다.
 
+JWT (JSON Web Token)
+- 디지털 서명
+- https://jwt.io
+- {header}.{payload}.{signature}
+- {signature} = Hash({header}.{payload} + {Server Secret Key})
+
+### NestJs Middleware
+- Pipes : 유효성, 페이로드 변환
+- Filters : 오류처리 미들웨어
+- Guards : 인증 미들웨어
+- Interceptors : 
+
+client => guard => interceptor => pipe => controller => service 
+=> controller => interceptor => filter => client
+
 #ISSUE
 
 1. TypeORM Entity in NESTJS - Cannot use import statement outside a module
